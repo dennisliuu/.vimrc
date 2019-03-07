@@ -13,15 +13,9 @@
 :set foldcolumn=1
 :set foldlevel=5
 :set autochdir
+:set whichwrap+=<,>,[,]
 
 filetype indent on
-
-:inoremap ( ()<Esc>i
-:inoremap { {}<Esc>i
-:inoremap [ []<ESC>i
-:inoremap " ""<ESC>i
-:inoremap ' ''<ESC>i
-:inoremap < <><ESC>i
 
 hi LineNr cterm=bold ctermfg=DarkGrey ctermbg=NONE
 hi CursorLineNr cterm=bold ctermfg=Green ctermbg=NONE
