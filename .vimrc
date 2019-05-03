@@ -14,8 +14,6 @@
 :set foldlevel=5
 :set autochdir
 
-
-
 hi LineNr cterm=bold ctermfg=DarkGrey ctermbg=NONE
 hi CursorLineNr cterm=bold ctermfg=Green ctermbg=NONE
 
@@ -41,6 +39,15 @@ let g:netrw_winsize = 25
 
 set laststatus=2
 set t_Co=256
+
+" move line up/down using shift+arrow
+nnoremap <S-DOWN> :m .+1<CR>==
+nnoremap <S-UP> :m .-2<CR>==
+inoremap <S-DOWN> <Esc>:m .+1<CR>==gi
+inoremap <S-UP> <Esc>:m .-2<CR>==gi
+vnoremap <S-DOWN> :m '>+1<CR>gv=gv
+vnoremap <S-UP> :m '<-2<CR>gv=gv
+
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
